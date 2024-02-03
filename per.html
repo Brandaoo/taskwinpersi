@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+
+        code {
+            display: block;
+            background-color: black;
+            color: white;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        h1, h2 {
+            color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Usando o schtasks para persistência no Windows</h1>
+
+<p>Observação: Para utilizar esta técnica, é necessário ter acesso de administrador.</p>
+
+<p> O  schtasks é uma ferramenta de linha de comando do Windows que permite gerenciar tarefas agendadas usando a Task Scheduler. Essa ferramenta pode ser usada para criar, modificar, excluir e executar tarefas agendadas. Neste artigo, discutiremos como usar o schtasks para obter persistência no Windows.</p>
+
+<h2>Introdução ao schtasks</h2>
+
+<p>O schtasks é uma ferramenta de linha de comando que permite gerenciar tarefas agendadas na Task Scheduler do Windows. Essa ferramenta pode ser usada para criar tarefas que executam scripts ou aplicativos maliciosos, permitindo que um atacante obtenha persistência no sistema comprometido.</p>
+
+<h2>Criando uma tarefa usando o schtasks</h2>
+
+<p>Para criar uma tarefa usando o schtasks, você pode usar o seguinte comando:</p>
+
+<code>schtasks /create /tn "Nome da Tarefa" /tr "Caminho do Script ou Aplicativo" /sc minute /mo 5</code>
+
+<p>Neste comando, <code>/create</code> é usado para criar uma nova tarefa, <code>/tn</code> é usado para definir o nome da tarefa, <code>/tr</code> é usado para especificar o caminho do script ou aplicativo que será executado, <code>/sc</code> é usado para definir a frequência da tarefa (minuto, hora, dia, semana ou mês) e <code>/mo</code> é usado para especificar a frequência em minutos.</p>
+
+<h2>Modificando uma tarefa usando o schtasks</h2>
+
+<p>Para modificar uma tarefa usando o schtasks, você pode usar o seguinte comando:</p>
+
+<code>schtasks /change /tn "Nome da Tarefa" /tr "Novo Caminho do Script ou Aplicativo" /sc minute /mo 10</code>
+
+<p>Neste comando, <code>/change</code> é usado para modificar uma tarefa existente, <code>/tn</code> é usado para especificar o nome da tarefa que será modificada, <code>/tr</code> é usado para especificar o novo caminho do script ou aplicativo que será executado, <code>/sc</code> é usado para definir a nova frequência da tarefa e <code>/mo</code> é usado para especificar a nova frequência em minutos.</p>
+
+<h2>Excluindo uma tarefa usando o schtasks</h2>
+
+<p>Para excluir uma tarefa usando o schtasks, você pode usar o seguinte comando:</p>
+
+<code>schtasks /delete /tn "Nome da Tarefa"</code>
+
+<p>Neste comando, <code>/delete</code> é usado para excluir uma tarefa existente e <code>/tn</code> é usado para especificar o nome da tarefa que será excluída.</p>
+
+
+
+</body>
+
+</html>
