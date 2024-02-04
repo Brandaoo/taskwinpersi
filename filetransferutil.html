@@ -194,15 +194,7 @@ Close-SFTPConnection</code></pre>
 	<pre><code>Copy-Item -Path "C:\Arquivos\MeuArquivo.txt" -Destination "\\Server\Destino" -Credential (Get-Credential -Credential "DomainB\Username")</code></pre>
 	<p><strong>Explicação:</strong>
 	- <code>Copy-Item -Path "C:\Arquivos\MeuArquivo.txt" -Destination "\\Server\Destino" -Credential (Get-Credential -Credential "DomainB\Username")</code>: Copia o arquivo para o destino especificado usando as credenciais do domínio de destino.</p>
-	<h3>16. BitsAdmin</h3>
-	<p>O BitsAdmin é uma ferramenta da linha de comando do Windows que permite gerenciar transferências de arquivos usando o Background Intelligent Transfer Service (BITS).</p>
-	<p><strong>Explicação:</strong>
-	- <code>bitsadmin</code>: O comando bitsadmin inicia o BITSAdmin Tool.
-	- <code>/transfer MeuDownloadJob</code>: Especifica o nome da transferência, neste caso, MeuDownloadJob.
-	- <code>/download</code>: Indica que é uma transferência de download.
-	- <code>/priority normal</code>: Define a prioridade da transferência como normal.
-	- <code>http://www.example.com/MeuArquivo.txt</code>: Especifica o URL do arquivo a ser baixado.
-	- <code>C:\Arquivos\MeuArquivo.txt</code>: Indica o caminho local onde o arquivo será salvo.</p>
+	
 
 </body>
 </html>
